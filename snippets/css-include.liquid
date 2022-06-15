@@ -1,0 +1,33 @@
+<style>
+{%- assign base_font = settings.type_base_font -%}
+{%- assign header_font = settings.type_header_font -%}
+{%- assign nav_font = settings.type_nav_font -%}
+{%- assign button_font = settings.type_button_font -%}
+
+{{ base_font | font_face: font_display: 'swap' }}
+{{ header_font | font_face: font_display: 'swap' }}
+{{ nav_font | font_face: font_display: 'swap' }}
+{{ button_font | font_face: font_display: 'swap' }}
+
+{%- assign base_font_bold = base_font | font_modify: 'weight', 'bolder' -%}
+{%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
+{%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
+
+{%- if base_font_bold -%}
+  {{ base_font_bold | font_face: font_display: 'swap' }}
+{%- endif -%}
+
+{%- if base_font_italic -%}
+  {{ base_font_italic | font_face: font_display: 'swap' }}
+{%- endif -%}
+
+{%- if base_font_bold_italic -%}
+  {{ base_font_bold_italic | font_face: font_display: 'swap' }}
+{%- endif -%}
+</style>
+
+
+<link rel="stylesheet" href="{{ 'theme-critical.css' | asset_url }}">
+
+<link rel="preload" href="{{ 'theme.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ 'theme.css' | asset_url }}"></noscript>
