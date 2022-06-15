@@ -6554,8 +6554,10 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
   margin-top: 40px;
 }
 .three-buttons-wrapper .three-buttons-individual-wrapper{
-  width: calc( 33.33% - 10px );
-  float: left;
+  /* width: calc( 33.33% - 10px );
+  float: left; */
+  width: 100%;
+  float: none;
   text-align: center;
   background: #00A2AA;
   margin: 0 5px;
