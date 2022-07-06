@@ -240,6 +240,10 @@
                                                         {% assign colorlist = tempList %}
                                                     {% endunless %}
                                                 {% endfor %}
+                              				{% else %}
+                              					<div class="o-layout__item u-1/{{ section.settings.grid_mobile }} {{ grid_item_width }}">
+                                                    {% render 'product-grid-item', product: product, page: 'collection' %}
+                                                </div> 
                                             {% endif %}
                                         {% endfor %}
                                         
