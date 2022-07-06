@@ -217,9 +217,38 @@
 
                             <div class="o-layout{% if settings.product_grid_masonry %} o-layout--masonry{% endif %}{% if section.settings.grid == 4 %} o-layout--small{% endif %}{% if section.settings.grid_mobile == '2' %} o-layout--small@tab-down{% endif %}">
                                 {% for product in collection.products %}
-                                    <div class="o-layout__item u-1/{{ section.settings.grid_mobile }} {{ grid_item_width }}">
-                                        {% render 'product-grid-item', product: product, page: 'collection' %}
-                                    </div>
+                                    
+                                    {% if collection.handle == 'traction' %}
+                                        {% for option in product.options %}
+                                            {% if option == "Color" or option == "Colour" %}
+                                                {% assign hasColor = true %}
+                                                {% assign index = forloop.index0 %}
+                                                {% assign colorlist = '' %}
+                                                {% assign color = '' %}
+                                                {% for variant in product.variants %}
+                                                    {% capture color %}
+                                                        {{ variant.options[index] }}
+                                                    {% endcapture %}
+                                                    {% unless colorlist contains color %}
+                                                        <div class="traction-collection o-layout__item u-1/{{ section.settings.grid_mobile }} {{ grid_item_width }}">
+                                                            {% render 'product-grid-item-variant', product: product, page: 'collection', image: variant.featured_image, hc_url: variant.url %}
+                                                        </div>
+                          
+                                                        {% capture tempList %}
+                                                            {{colorlist | append: color | append: ' '}}
+                                                        {% endcapture %}
+                                                        {% assign colorlist = tempList %}
+                                                    {% endunless %}
+                                                {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                        
+                                    {% else %}
+                                        <div class="o-layout__item u-1/{{ section.settings.grid_mobile }} {{ grid_item_width }}">
+                                            {% render 'product-grid-item', product: product, page: 'collection' %}
+                                        </div>    
+                                    {% endif %}
+                                    
                                 {% else %}
                                     {% if collection.handle == 'all' and collection.all_vendors.size == 0 and collection.all_types.size == 0 %}
                                         {% comment %}

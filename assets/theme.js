@@ -95,7 +95,7 @@ theme.LibraryLoader = (function() {
     },
 	photoswipe: {
       tagId: 'photoswipe',
-      src: 'https://cdn.shopify.com/s/files/1/2333/0623/t/70/assets/photoswipe.min.js?v=2536502651186615362',
+      src: 'https://cdn.shopify.com/s/files/1/0093/4882/t/32/assets/photoswipe.min.js?v=25365026511866153621645651998',
       type: types.script
     },
 	fecha: {

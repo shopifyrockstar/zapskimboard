@@ -40,7 +40,7 @@
     "product_grid_label_collection": "",
     "product_grid_detail_style": "default",
     "product_grid_price": true,
-    "product_grid_swatch": true,
+    "product_grid_swatch": false,
     "product_grid_swatch_image": true,
     "product_grid_reviews": false,
     "product_reviews": false,
@@ -153,12 +153,12 @@
           "style": "sticky",
           "parent_links": true,
           "mega_nav": true,
-          "mega_image": "shopify:\/\/shop_images\/fuse7.png",
-          "mega_image_link": "shopify:\/\/collections\/fresh-sleds",
-          "mega_title": "Just Added Skimboards",
+          "mega_image": "shopify:\/\/shop_images\/hoddiednavbg7.png",
+          "mega_image_link": "shopify:\/\/collections\/towels",
+          "mega_title": "New beach gear!",
           "mega_text": "",
-          "mega_link_title": "Shop Now",
-          "mega_link": "shopify:\/\/collections\/fresh-sleds",
+          "mega_link_title": "Shop all towels",
+          "mega_link": "shopify:\/\/collections\/towels",
           "show_locale_selector": true,
           "show_currency_selector": true,
           "message_show": true,
@@ -214,6 +214,12 @@
       "collection-template": {
         "type": "collection-template",
         "blocks": {
+          "93f81de4-9857-4954-9731-75e0d6d983ec": {
+            "type": "linklist",
+            "settings": {
+              "linklist": "shop"
+            }
+          },
           "7eb5b0a9-8800-466b-a06e-2e01426fe9f6": {
             "type": "group",
             "settings": {
@@ -221,6 +227,7 @@
           }
         },
         "block_order": [
+          "93f81de4-9857-4954-9731-75e0d6d983ec",
           "7eb5b0a9-8800-466b-a06e-2e01426fe9f6"
         ],
         "settings": {
@@ -446,82 +453,83 @@
       "1566456250311": {
         "type": "home-slideshow",
         "blocks": {
-          "1566456250311-0": {
+          "a6cc9edf-7601-41d4-bcbc-9c188cd6dcfb": {
             "type": "image",
-            "disabled": true,
             "settings": {
-              "image": "shopify:\/\/shop_images\/memorialday-hero.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/memorialday-mobile.jpg",
+              "image": "shopify:\/\/shop_images\/fuse-hero.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/ace-hero-mobile1.jpg",
               "image_alignment": "center",
               "alignment": "left",
               "text_color": "default-light",
-              "title": "Memorial Day Sale!",
-              "text": "<p>Up to 30% OFF all BLEM Boards<br\/>10% OFF all other Skimboards<br\/>10% OFF all gear and apparel<br\/>Plus FREE Shipping over $100!<\/p>",
-              "link_title": "SHOP NOW",
-              "link": "shopify:\/\/collections\/discount-boards"
+              "title": "THE 2022 ZAP FUSE SKIMBOARD",
+              "text": "<p>All around high performance shape at the right price.<\/p><p><\/p>",
+              "link_title": "get some",
+              "link": "shopify:\/\/products\/fuse"
+            }
+          },
+          "331e96ae-925a-4a2a-8a85-0d4aa33be186": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ace-hero_93b79883-9bcd-49a2-a4e8-9f7682b147f1.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/ace-hero-mobile_6351dc05-16fd-4db3-83d5-117d62b84358.jpg",
+              "image_alignment": "center",
+              "alignment": "left",
+              "text_color": "default-light",
+              "title": "Resin art for all!",
+              "text": "<p>The Zap Ace Skimboard is truly a work of art. Each board is individually crafted and pured into a unique ride unlike anything else.<\/p>",
+              "link_title": "lets see it!",
+              "link": "shopify:\/\/collections\/ace"
+            }
+          },
+          "837d7b31-88cb-4273-92fc-0ca73d1af4fd": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/wedge-hero.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/wedge-hero-mobile_24ce922e-3180-437e-8909-c0523c6583a1.jpg",
+              "image_alignment": "top",
+              "alignment": "left",
+              "text_color": "default-light",
+              "title": "shred the wedge",
+              "text": "<p>An iconic skimboard known for unrivaled performance and durability for beginners.<\/p><p><\/p>",
+              "link_title": "CHECK EM OUT!",
+              "link": "shopify:\/\/collections\/wedge"
             }
           },
           "ef4b6937-462e-48e8-a541-faf1acb7715a": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/wax-hero.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/wax-hero-mobile.jpg",
               "image_alignment": "center",
               "alignment": "left",
               "text_color": "default-light",
-              "title": "ZAP WAX IN STOCK!",
+              "title": "ZAP WAX",
               "text": "<p>Hand poured in the USA. Available in basecoat, cold, cool, warm, and tropical. <\/p>",
               "link_title": "SHOP NOW",
               "link": "shopify:\/\/collections\/wax"
-            }
-          },
-          "331e96ae-925a-4a2a-8a85-0d4aa33be186": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/catalog-hero.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/catalog-hero-mobile.jpg",
-              "image_alignment": "center",
-              "alignment": "left",
-              "text_color": "default-light",
-              "title": "2022 Collection is here!",
-              "text": "<p>The NEW Zap Lineup is here, check out the catalog for a full look into all the products for the New Year!<\/p>",
-              "link_title": "CHECK IT OUT",
-              "link": "https:\/\/www.zapskimboards.com\/collections\/2022"
             }
           },
           "ff226636-26e5-474c-afbe-82575f2d6f1e": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Core-Hero.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/core-hero-mobiled.jpg",
               "image_alignment": "center",
               "alignment": "left",
               "text_color": "default-light",
-              "title": "The NEW Core Skimboard!",
-              "text": "<p>Check out the newest addition to the Zap lineup. The Core is a great entry-level board based off our popular Wedge series. This board is offered in 40\", 44” and 48” along with a wide range of colors. Get yours today!<\/p>",
+              "title": "the core skimboard",
+              "text": "<p>Meet the newest addition to our lineup, the Core!<\/p>",
               "link_title": "check it out",
               "link": "https:\/\/www.zapskimboards.com\/collections\/skimboards\/products\/core"
-            }
-          },
-          "b8612308-6ea5-44cb-9257-4e96d37430b4": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/gerardo-world-champ.png",
-              "image_mobile": "shopify:\/\/shop_images\/gerardo-world-champ-mobile.png",
-              "image_alignment": "center",
-              "alignment": "left",
-              "text_color": "default-light",
-              "title": "WORLD CHAMPION GERARDO VALENCIA",
-              "text": "<p>The first World Champion at Zap Skimboards and the first skimboarder from Mexico to win the United Skim Tour and Skim USA tour! <\/p>",
-              "link_title": "READ MORE",
-              "link": "https:\/\/www.zapskimboards.com\/blogs\/the-zap-skimboards-blog\/gerardo-valencia-is-world-champion"
             }
           }
         },
         "block_order": [
-          "1566456250311-0",
-          "ef4b6937-462e-48e8-a541-faf1acb7715a",
+          "a6cc9edf-7601-41d4-bcbc-9c188cd6dcfb",
           "331e96ae-925a-4a2a-8a85-0d4aa33be186",
-          "ff226636-26e5-474c-afbe-82575f2d6f1e",
-          "b8612308-6ea5-44cb-9257-4e96d37430b4"
+          "837d7b31-88cb-4273-92fc-0ca73d1af4fd",
+          "ef4b6937-462e-48e8-a541-faf1acb7715a",
+          "ff226636-26e5-474c-afbe-82575f2d6f1e"
         ],
         "settings": {
           "slideshow_style": "default",
@@ -530,7 +538,7 @@
           "autoplay_speed": 10,
           "slideshow_height": "large",
           "slideshow_width": "full",
-          "overlay_strength": 10
+          "overlay_strength": 0
         }
       },
       "1566456269728": {
@@ -805,9 +813,9 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "message_show": true,
+          "message_show": false,
           "home_page_only": false,
-          "message_text": "FREE Shipping on all orders over $100!",
+          "message_text": "4th of July Sale! Save up to 30% on sale boards. 10% off everything else. See cart for discount price. FREE Shipping on all orders over $100!",
           "message_link": "https:\/\/www.zapskimboards.com\/collections\/discount-boards",
           "message_color_bg": "#00acb3",
           "message_color_text": "#ffffff"
@@ -1005,6 +1013,7 @@
           "grid_mobile": "1",
           "rows": 1,
           "link_title": "View all",
+          "link": "",
           "show_bg": false
         }
       },
@@ -1018,6 +1027,7 @@
           "grid_mobile": "1",
           "rows": 1,
           "link_title": "",
+          "link": "",
           "show_bg": false
         }
       },
@@ -1388,6 +1398,7 @@
           "grid_mobile": "1",
           "rows": 1,
           "link_title": "View all",
+          "link": "",
           "show_bg": false
         }
       },
