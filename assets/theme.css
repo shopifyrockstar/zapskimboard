@@ -6553,6 +6553,35 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
 .three-buttons-wrapper{
   margin-top: 40px;
 }
+.three-buttons-wrapper.core{
+  display: flex;
+  align-items: center;
+}
+.three-buttons-wrapper.core .three-buttons-individual-wrapper:first-child{
+  background: unset;
+}
+.three-buttons-wrapper.core .three-buttons-individual-wrapper:first-child button{
+  padding: 10px 15px;
+  margin-bottom: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0;
+  font-weight: 500;
+  background-color: #00A2AA;
+  line-height: 24px;
+}
+@media (max-width: 480px){
+  .three-buttons-wrapper.core .three-buttons-individual-wrapper:first-child button{
+    font-size: 10px;
+    padding: 9px 0;
+  }
+}
+.three-buttons-wrapper.core .three-buttons-individual-wrapper:first-child button:hover span{
+  opacity: 0.7;
+}
+.three-buttons-wrapper.core .three-buttons-individual-wrapper:first-child button:after{
+  display: none;
+}
 .three-buttons-wrapper .three-buttons-individual-wrapper{
   width: calc( 33.33% - 10px );
   float: left;
