@@ -309,16 +309,34 @@
                                                 <p class="product-single__stock-note js-price-stock-note" data-qty-limit="{{ section.settings.inventory_limit }}" {% if current_variant.inventory_management == "shopify" and current_variant.available %}{% unless current_variant.inventory_quantity <= section.settings.inventory_limit %} style="display:none;"{% endunless %}{% endif %}>{{ 'products.product.qty_notice_html' | t: count: current_variant.inventory_quantity }}</p>
                                             {% endif %}
 
-                                            <div class="product-single__add js-product-buttons{% unless product.available %} product-single__add--sold{% endunless %}">
+                                            {% if product.handle == 'core' %}
 
-                                                <button type="submit" name="add" class="c-btn c-btn--full c-btn--plus c-btn--{% if section.settings.enable_payment_button %}light{% else %}primary{% endif %} product-single__add-btn js-product-add">
-                                                    <span class="js-product-add-text">{{ 'products.product.add_to_cart' | t }}</span>
-                                                </button>
-                                                {% if section.settings.enable_payment_button %}
-                                                    {{ form | payment_button }}
-                                                {% endif %}
-
-                                            </div>                                     
+                                                <div class="three-buttons-wrapper core">
+                                                  <div class="three-buttons-individual-wrapper">
+                                                    <button type="submit" name="add" class="c-btn c-btn--full c-btn--plus c-btn--{% if section.settings.enable_payment_button %}light{% else %}primary{% endif %} product-single__add-btn js-product-add">
+                                                      <span class="js-product-add-text">{{ 'products.product.add_to_cart' | t }}</span>
+                                                    </button>
+                                                  </div>
+                                                  <div class="three-buttons-individual-wrapper">
+                                                      <a href="/pages/store-locator">BUY LOCAL</a>
+                                                  </div>
+                                                  <div class="three-buttons-individual-wrapper">
+                                                      <a href="/pages/shop-online">ONLINE DEALERS</a>
+                                                  </div>                                        
+                                                </div>
+                                                
+                                              {% else %}
+                                              <div class="product-single__add js-product-buttons{% unless product.available %} product-single__add--sold{% endunless %}">
+  
+                                                  <button type="submit" name="add" class="c-btn c-btn--full c-btn--plus c-btn--{% if section.settings.enable_payment_button %}light{% else %}primary{% endif %} product-single__add-btn js-product-add">
+                                                      <span class="js-product-add-text">{{ 'products.product.add_to_cart' | t }}</span>
+                                                  </button>
+                                                  {% if section.settings.enable_payment_button %}
+                                                      {{ form | payment_button }}
+                                                  {% endif %}
+  
+                                              </div>
+                                              {% endif %}                                       
                                         {% endform %}
                                       <div class="lazer-description-wrapper">
                                         {% if section.settings.layout == 'minimal' %}
