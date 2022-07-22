@@ -186,13 +186,12 @@
                                 </div>
                             </noscript>
                         {% endif %}
-
                        
-                      	{% if collection.title == '2022 Board Lineup' %}                      	  
+                      	{% if collection.title == '2022 Board Lineup' %}
                           
                           <div class="core-wrapper">
                             {% for image in product.images %}
-                            	{% if image.alt == '40-aqua, 44-aqua' %}
+                            	{% if image.alt == '44-aqua' %}
                                   <img class="variant__image product-image lazy2 lazyload show-manual" data-id="{{ image.id }}" data-order="2" 
                                        id="40_size"
                                        data-src="{{ image | img_url: '320x'}}"
@@ -213,7 +212,7 @@
                             {% endfor %}
                             
                             {% for image in product.images %}
-                            	{% if image.alt == '40-aqua-b, 44-aqua-b' %}
+                            	{% if image.alt == '44-aqua-b' %}
                                   <img class="product-image lazy2 lazyload" data-id="{{ image.id }}" data-order="1"
                                        id="1"
                                        data-src="{{ image | img_url: '320x'}}"

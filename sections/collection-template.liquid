@@ -218,9 +218,15 @@
                             <div class="o-layout{% if settings.product_grid_masonry %} o-layout--masonry{% endif %}{% if section.settings.grid == 4 %} o-layout--small{% endif %}{% if section.settings.grid_mobile == '2' %} o-layout--small@tab-down{% endif %}">
                                 {% for product in collection.products %}
                                     
-                                    {% if collection.handle == 'traction' %}
+                                    {% if collection.handle == 'traction' or collection.handle == 'apparel' %}
+                                      {% assign hasColor = false %}
                                         {% for option in product.options %}
-                                            {% if option == "Color" or option == "Colour" %}
+                                          {% if option == "Color" or option == "Colour" %}
+                                            {% assign hasColor = true %}
+                                          {% endif %}
+                                        {% endfor %}
+                                        {% for option in product.options %}                                          
+                                            {% if option == "Color" or option == "Colour" %}                                              
                                                 {% assign hasColor = true %}
                                                 {% assign index = forloop.index0 %}
                                                 {% assign colorlist = '' %}
@@ -240,13 +246,12 @@
                                                         {% assign colorlist = tempList %}
                                                     {% endunless %}
                                                 {% endfor %}
-                              				{% else %}
-                              					<div class="o-layout__item u-1/{{ section.settings.grid_mobile }} {{ grid_item_width }}">
-                                                    {% render 'product-grid-item', product: product, page: 'collection' %}
-                                                </div> 
+                                            {% elsif hasColor == false %}
+                                              <div class="o-layout__item u-1/{{ section.settings.grid_mobile }} {{ grid_item_width }} size-only">
+                                                {% render 'product-grid-item', product: product, page: 'collection' %}
+                                              </div>
                                             {% endif %}
                                         {% endfor %}
-                                        
                                     {% else %}
                                         <div class="o-layout__item u-1/{{ section.settings.grid_mobile }} {{ grid_item_width }}">
                                             {% render 'product-grid-item', product: product, page: 'collection' %}
