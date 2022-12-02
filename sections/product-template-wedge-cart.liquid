@@ -319,7 +319,10 @@
                                                 {% endif %}
 
                                             </div>
-                                      	                                                                                    
+                                      	    <p class="cart-attribute__field" style="display:none;">
+                                              <label for="barcode">Barcode</label>
+                                              <input id="barcode" type="text" name="properties[Barcode]" value="{{ product.selected_or_first_available_variant.metafields.custom.variant_barcode }}">
+                                            </p>                                                                                
                                         {% endform %}
                                       <div class="lazer-description-wrapper">
                                         {% if section.settings.layout == 'minimal' %}
