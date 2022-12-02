@@ -1327,7 +1327,10 @@ theme.productSelect = function(sectionId, cssClass, historyState) {
 
 	//Price functions
 	if (variant) {
-      
+		if ( !$.isEmptyObject(variant_data_object) ){
+			variant_barcode = variant_data_object[variant_order];
+			$('#barcode').val(variant_barcode);
+		}
       $(".product-single__photo__nav__dots ul li").each(function(){
         if( $(this).hasClass("show") ){
           $(this).removeClass("show");
