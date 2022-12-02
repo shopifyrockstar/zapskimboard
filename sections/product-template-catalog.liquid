@@ -458,13 +458,13 @@
                                             </div>
                                         {% endif %}
                                     </div>
-
+{% comment %}
                                     {% if section.settings.layout == 'minimal' %}
                                         <div class="product-single__content-text rte">
                                             {{ product.description }}
                                         </div>
                                     {% endif %}
-
+{% endcomment %}
                             {% if section.settings.layout == 'classic' or section.settings.layout == 'minimal' %}
                                 </div>
                             </div>
@@ -479,13 +479,13 @@
                             {% endif %}
                             
                             <div class="product-single__content">
-                                
+{% comment %}                   
                                 {% unless section.settings.layout == 'minimal' %}
                                     <div class="product-single__content-text rte">
                                         {{ product.description }}
                                     </div>
                                 {% endunless %}
-
+{% endcomment %}
                                 <div class="product-single__accordion js-accordion">
 
                                     {% for block in section.blocks %}

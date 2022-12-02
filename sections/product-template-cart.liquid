@@ -56,7 +56,8 @@
                     <div class="u-hidden@desk-up" data-set="cart-photo-replace">
                         <div class="js-cart-replace">
                     {% endif %}
-                            <div class="product-single__photos product-single__photos--{{ section.settings.image_size }}" data-product-media-wrapper data-product-media-group data-enable-video-looping="{{ section.settings.enable_video_looping }}">
+                            <div class="product-single__photos product-single__photos--{{ section.settings.image_size }} {% if product.handle == 'zap-board-sock' %}show-left{% endif %}" 
+                              data-product-media-wrapper data-product-media-group data-enable-video-looping="{{ section.settings.enable_video_looping }}">
 
                                 <div class="product-single__photo js-product-slider" data-slider-id="1">
 

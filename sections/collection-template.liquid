@@ -285,12 +285,17 @@
                                             </div>
                                         {% endfor %}
                                     {% else %}
-                                        <div class="o-layout__item 1/1">
+                                        <div class="o-layout__item 1/1 empty-wrapper">
                                             <div class="collection-empty">
                                                 <h5 class="collection-empty__title">{{ 'collections.general.no_matches' | t }}</h5>
-                                                <span class="emoji collection-empty__emoji">
+                                                {% comment %} <span class="emoji collection-empty__emoji">
                                                     <i class="icon icon--confused"></i>
-                                                </span>
+                                                </span> {% endcomment %}
+                                                <h5 class="collection-empty__title-bottom">
+                                                    SHOP FROM ONE OF OUR AUTHORIZED DEALERS BELOW
+                                                </h5>
+                                                <a href="/pages/store-locator" class="empty-button">BUY LOCAL</a>
+                                                <a href="/pages/shop-online" class="empty-button">ONLINE DEALERS</a>
                                             </div>
                                         </div>
                                     {% endif %}

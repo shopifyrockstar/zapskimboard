@@ -161,9 +161,9 @@
           "mega_link": "shopify:\/\/collections\/towels",
           "show_locale_selector": true,
           "show_currency_selector": true,
-          "message_show": true,
+          "message_show": false,
           "home_page_only": false,
-          "message_text": "Glaspro Inc. will be closed on Monday, July 5. Please allow up to 2-3 Business days for orders to process.",
+          "message_text": "Labor Day Sale! Use code \"LABORDAY22\" for 10% off.",
           "message_link": "",
           "message_color_bg": "#00acb3",
           "message_color_text": "#fafafa"
@@ -485,17 +485,16 @@
           },
           "837d7b31-88cb-4273-92fc-0ca73d1af4fd": {
             "type": "image",
-            "disabled": true,
             "settings": {
-              "image": "shopify:\/\/shop_images\/wedge-hero.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/wedge-hero-mobile_24ce922e-3180-437e-8909-c0523c6583a1.jpg",
+              "image": "shopify:\/\/shop_images\/cazador-home.jpg",
+              "image_mobile": "shopify:\/\/shop_images\/wedge-hero-mobile_12fc0444-297f-4922-8bb3-010f7252d4a3.jpg",
               "image_alignment": "top",
               "alignment": "left",
               "text_color": "default-light",
-              "title": "The Zap Wedge Skimboard",
-              "text": "<p>An iconic skimboard known for unrivaled performance and durability for beginners.<\/p><p><\/p>",
-              "link_title": "CHECK EM OUT!",
-              "link": "shopify:\/\/collections\/wedge"
+              "title": "SHRED THE CAZADOR",
+              "text": "<p>The Cazador has a sharp pulled in tail that works well in larger conditions on the west coast, while still meeting all the requirements for small to mid sized waves found on the east coast and gulf coast.<\/p>",
+              "link_title": "CHECK IT OUT!",
+              "link": "shopify:\/\/collections\/cazador"
             }
           },
           "ef4b6937-462e-48e8-a541-faf1acb7715a": {
@@ -515,6 +514,7 @@
           },
           "ff226636-26e5-474c-afbe-82575f2d6f1e": {
             "type": "image",
+            "disabled": true,
             "settings": {
               "image": "shopify:\/\/shop_images\/Core-Hero.jpg",
               "image_mobile": "shopify:\/\/shop_images\/core-hero-mobiled.jpg",
@@ -806,8 +806,8 @@
         "settings": {
           "message_show": false,
           "home_page_only": false,
-          "message_text": "4th of July Sale! Save up to 30% on sale boards. 10% off everything else. See cart for discount price. FREE Shipping on all orders over $100!",
-          "message_link": "https:\/\/www.zapskimboards.com\/collections\/discount-boards",
+          "message_text": "Black Friday 20% off everything. See cart for discount.",
+          "message_link": "",
           "message_color_bg": "#00acb3",
           "message_color_text": "#ffffff"
         }
