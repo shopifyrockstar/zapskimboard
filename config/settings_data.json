@@ -804,9 +804,9 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "message_show": false,
+          "message_show": true,
           "home_page_only": false,
-          "message_text": "Black Friday 20% off everything. See cart for discount.",
+          "message_text": "FREE Shipping on all skimboards to continental USA",
           "message_link": "",
           "message_color_bg": "#00acb3",
           "message_color_text": "#ffffff"
