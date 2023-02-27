@@ -42,8 +42,8 @@
         
     {% endif %}
     
-  {% unless product.title == 'Zap Core Skimboard' %}
-    <div class="product-top {% if collection.title == '2022 Board Lineup' %}product-top-2021{% endif %}">
+{% unless product.title == 'Zap Core Skimboard' and collection.title == 'Board Lineup' %}
+    <div class="product-top {% if collection.title == 'Board Lineup' %}product-top-2021{% endif %}">
         <a href="{{ product.url | within: collection }}" class="product-link js-product-link{% if page == 'home' %} home-products__link{% endif %}" title="{{ product.title }}" tabindex="-1">
             <div class="product__media{% if settings.product_grid_second_hover and product.media[1] != blank %} product__media--hover{% endif %}">
 
@@ -77,18 +77,18 @@
                         {% endif %}
 
                         {%- assign img_url = product.featured_media.preview_image.src | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
-                      	{% if collection.title == '2022 Board Lineup' %}
-                      	  {% for image in product.images %}
+                        {% if collection.title == 'Board Lineup' %}
+                          {% for image in product.images %}
                             {% assign loop_order = forloop.index | modulo: 2 %}
                             {% if loop_order == 0 %}
                               <img class="product-image lazy2 lazyload" data-id="{{ image.id }}" data-order="{{ forloop.index }}"
                                           id="{{ forloop.index }}"
                                           data-src="{{ image | img_url: '320x'}}"
-                                          >	
+                                          > 
                             {% else %}
                               {% continue%}
                             {% endif %}
-                      	  {% endfor %}
+                          {% endfor %}
                           
                           {% for option in product.options_with_values %}
                             {% assign option_title  = option.name | downcase %}
@@ -98,19 +98,19 @@
                                         <img class="product__img js lazy2 lazyload variant__image {% if forloop.index == 1%}show-manual{% endif %}" data-id="{{ variant.image.id }}"
                                           id="{{ variant.title | split:'"' | first }}_size" data-order="{{ forloop.index }}"
                                           data-src="{{ img_url_variant }}"
-                                          >		                      			
+                                          >                                     
                                 {% endfor %}
                               {% endif %}                      
 
                           {% endfor %}
                       
-                      	{% else %}
-                      		<img class="product__img img-lazyload lazyload lazy2 js initial-image"
+                        {% else %}
+                            <img class="product__img img-lazyload lazyload lazy2 js initial-image"
                               data-src="{{ img_url }}"
                               data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512]"
                               data-sizes="auto"
                               alt="{{ product.featured_media.preview_image.alt | escape }}">
-                      	{% endif %}
+                        {% endif %}
                       {% comment %}
                         <img class="product__img img-lazyload lazyload lazy2 js initial-image"
                             data-src="{{ img_url }}"
@@ -154,7 +154,7 @@
         {% endunless %}
     </div>
   {% else %}
-  	<div class="product-top {% if collection.title == '2022 Board Lineup' %}product-top-2021-core{% endif %}">
+    <div class="product-top {% if collection.title == 'Board Lineup' %}product-top-2021-core{% endif %}">
         <a href="{{ product.url | within: collection }}" class="product-link js-product-link{% if page == 'home' %} home-products__link{% endif %}" title="{{ product.title }}" tabindex="-1">
             <div class="product__media{% if settings.product_grid_second_hover and product.media[1] != blank %} product__media--hover{% endif %}">
 
@@ -187,53 +187,53 @@
                             </noscript>
                         {% endif %}
                        
-                      	{% if collection.title == '2022 Board Lineup' %}
+                        {% if collection.title == 'Board Lineup' %}
                           
                           <div class="core-wrapper">
                             {% for image in product.images %}
-                            	{% if image.alt == '44-aqua' %}
+                                {% if image.alt == '44-aqua' %}
                                   <img class="variant__image product-image lazy2 lazyload show-manual" data-id="{{ image.id }}" data-order="2" 
                                        id="40_size"
                                        data-src="{{ image | img_url: '320x'}}"
                                        >
-                            	{% endif %}
-                            	{% if image.alt == '44-sand' %}
+                                {% endif %}
+                                {% if image.alt == '44-sand' %}
                                   <img class="variant__image product-image lazy2 lazyload" data-id="{{ image.id }}" data-order="4"
                                        id="44_size"
                                        data-src="{{ image | img_url: '320x'}}"
                                        >
-                            	{% endif %}
-                            	{% if image.alt == '48-orange' %}
+                                {% endif %}
+                                {% if image.alt == '48-orange' %}
                                   <img class="variant__image product-image lazy2 lazyload" data-id="{{ image.id }}" data-order="6"
                                        id="48_size"
                                        data-src="{{ image | img_url: '320x'}}"
                                        >
-                            	{% endif %}                            	
+                                {% endif %}                             
                             {% endfor %}
                             
                             {% for image in product.images %}
-                            	{% if image.alt == '44-aqua-b' %}
+                                {% if image.alt == '44-aqua-b' %}
                                   <img class="product-image lazy2 lazyload" data-id="{{ image.id }}" data-order="1"
                                        id="1"
                                        data-src="{{ image | img_url: '320x'}}"
                                        >
-                            	{% endif %}
-                            	{% if image.alt == '44-sand-b' %}
+                                {% endif %}
+                                {% if image.alt == '44-sand-b' %}
                                   <img class="product-image lazy2 lazyload" data-id="{{ image.id }}" data-order="2"
                                        id="2"
                                        data-src="{{ image | img_url: '320x'}}"
                                        >
-                            	{% endif %}
-                            	{% if image.alt == '48-orange-b' %}
+                                {% endif %}
+                                {% if image.alt == '48-orange-b' %}
                                   <img class="product-image lazy2 lazyload" data-id="{{ image.id }}" data-order="3"
                                        id="3"
                                        data-src="{{ image | img_url: '320x'}}"
                                        >
-                            	{% endif %}
+                                {% endif %}
                             {% endfor %}
                           </div>                          
                       
-                      	{% endif %}
+                        {% endif %}
                       {% comment %}
                         <img class="product__img img-lazyload lazyload lazy2 js initial-image"
                             data-src="{{ img_url }}"
@@ -277,8 +277,9 @@
         {% endunless %}
     </div>
   {% endunless%}
+  
 
-  {% unless collection.title == '2022 Board Lineup' %}
+  {% unless collection.title == 'Board Lineup' %}
     <a href="{{ product.url | within: collection }}" class="product-link js-product-link{% if page == 'home' %} home-products__link{% endif %}" title="{{ product.title }}">
         <div class="product__details">
             <h3 class="product__title h4">{{ product.title }}</h3>
@@ -314,7 +315,7 @@
     </a>
   {% endunless %}
 
-  {% if collection.title == '2022 Board Lineup' %}
+  {% if collection.title == 'Board Lineup' %}
   <div class="collection-additional-info-wrapper">
     {% for tag in product.tags %}
     	{% if tag contains 'Size_' %}  			
