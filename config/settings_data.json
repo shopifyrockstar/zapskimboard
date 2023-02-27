@@ -3,7 +3,7 @@
     "color_headings": "#212121",
     "color_text": "#535353",
     "color_alt_text": "#666666",
-    "color_brand": "#00acb3",
+    "color_brand": "#95c940",
     "color_accent": "#f0f0f0",
     "color_button": "#ffffff",
     "product_grid_sale_color": "#ef0909",
@@ -394,7 +394,8 @@
           "title": "Testimonials",
           "style_desktop": "carousel",
           "style_mobile": "carousel",
-          "link_title": "Shop now"
+          "link_title": "Shop now",
+          "link": ""
         }
       },
       "product-sections": {
@@ -406,6 +407,7 @@
               "title": "Text",
               "text": "<p>Promote your brand by using a powerful combination of buttons, custom text, page content and images.<\/p>",
               "link_title": "Learn more",
+              "link": "",
               "align": "center",
               "width": "1\/1"
             }
@@ -414,6 +416,7 @@
             "type": "button",
             "settings": {
               "title": "Button",
+              "link": "",
               "color": "primary",
               "size": "default",
               "width": "1\/2"
@@ -426,6 +429,7 @@
               "text_alignment": "bottom",
               "title": "Text over image",
               "text": "Use these image blocks to tell your story, promote your products or create a beautiful gallery.",
+              "link": "",
               "overlay_strength": 30,
               "height": "medium",
               "width": "1\/3"
@@ -472,15 +476,15 @@
             "type": "image",
             "disabled": true,
             "settings": {
-              "image": "shopify:\/\/shop_images\/ace-hero_93b79883-9bcd-49a2-a4e8-9f7682b147f1.jpg",
-              "image_mobile": "shopify:\/\/shop_images\/ace-hero-mobile_6351dc05-16fd-4db3-83d5-117d62b84358.jpg",
+              "image": "shopify:\/\/shop_images\/ZAP-happy-holidays-hero-2.png",
+              "image_mobile": "shopify:\/\/shop_images\/ZAP-happy-holidays-mobile-2.png",
               "image_alignment": "center",
-              "alignment": "left",
-              "text_color": "default-light",
-              "title": "the 2022 zap ace skimboard",
-              "text": "<p>The Zap Ace Skimboard is truly a work of art. Each board is individually crafted and pured into a unique ride unlike anything else.<\/p>",
-              "link_title": "lets see it!",
-              "link": "shopify:\/\/collections\/ace"
+              "alignment": "right",
+              "text_color": "default",
+              "title": "Happy Holidays",
+              "text": "<p>Sending the warmest holiday wishes and happy New Year from everyone at Zap Skimboards. <\/p>",
+              "link_title": "",
+              "link": ""
             }
           },
           "837d7b31-88cb-4273-92fc-0ca73d1af4fd": {
@@ -499,7 +503,6 @@
           },
           "ef4b6937-462e-48e8-a541-faf1acb7715a": {
             "type": "image",
-            "disabled": true,
             "settings": {
               "image": "shopify:\/\/shop_images\/wax-hero.jpg",
               "image_mobile": "shopify:\/\/shop_images\/wax-hero-mobile.jpg",
@@ -804,12 +807,12 @@
       "announcement": {
         "type": "announcement",
         "settings": {
-          "message_show": true,
+          "message_show": false,
           "home_page_only": false,
-          "message_text": "FREE Shipping on all skimboards to continental USA",
+          "message_text": "20% off Presidents Day SITEWIDE FLASH SALE. Ends 11:59 PM EST",
           "message_link": "",
-          "message_color_bg": "#00acb3",
-          "message_color_text": "#ffffff"
+          "message_color_bg": "#212121",
+          "message_color_text": "#95c940"
         }
       },
       "product-template-catalog": {
@@ -1631,7 +1634,7 @@
           "show_share_buttons": false,
           "enable_zoom": true,
           "enable_video_looping": false,
-          "image_size": "small",
+          "image_size": "large",
           "bg_color": "#ffffff",
           "text_color": "default",
           "bg_height": "default"
@@ -1737,23 +1740,6 @@
           "text": "<p>Zap Skimboards looks best in action with you! Share your photos with us to be featured here.<\/p><p><\/p><p><a href=\"\/pages\/picture-gallery\" title=\"Picture Gallery\">SHOP GALLERY<\/a><\/p>"
         }
       },
-      "1657288804d47a683f": {
-        "type": "home-image-text",
-        "disabled": true,
-        "settings": {
-          "bg_image": "shopify:\/\/shop_images\/LAZER_HERO.png",
-          "image_alignment": "center",
-          "text": "<p><strong>THE LAZER SKIMBOARD<\/strong><\/p>",
-          "inline_image_width": 200,
-          "video": "",
-          "link_title": "Learn more",
-          "link": "shopify:\/\/products\/zap-ace-blem-skimboard-772",
-          "section_height": "small",
-          "overlay_color": "#ffffff",
-          "overlay_strength": 0,
-          "content_style": "light"
-        }
-      },
       "16572888775acbf6f1": {
         "type": "home-image-grid",
         "blocks": {
@@ -1789,11 +1775,224 @@
           "height": "medium",
           "overlay_strength": 0
         }
+      },
+      "1a78e919-90cb-425e-9a05-c5408b6c99dd": {
+        "type": "home-image-slideshow",
+        "disabled": true,
+        "blocks": {
+          "1a78e919-90cb-425e-9a05-c5408b6c99dd-16715437265ea834f9-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ZAP-happy-holidays-hero.png",
+              "link": "https:\/\/www.zapskimboards.com\/collections\/2022"
+            }
+          },
+          "1a78e919-90cb-425e-9a05-c5408b6c99dd-16715437265ea834f9-1": {
+            "type": "image",
+            "disabled": true,
+            "settings": {
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1a78e919-90cb-425e-9a05-c5408b6c99dd-16715437265ea834f9-0",
+          "1a78e919-90cb-425e-9a05-c5408b6c99dd-16715437265ea834f9-1"
+        ],
+        "settings": {
+          "autoplay": false,
+          "autoplay_speed": 8,
+          "slideshow_width": "full"
+        }
+      },
+      "product-template-hellcatv3": {
+        "type": "product-template-hellcatv3",
+        "settings": {
+          "layout": "minimal",
+          "container": "medium",
+          "show_breadcrumbs": true,
+          "show_vendor": false,
+          "product_variant_style": "buttons",
+          "use_swatch_images": false,
+          "show_quantity_selector": false,
+          "show_tax_notice": false,
+          "show_inventory": true,
+          "inventory_limit": 3,
+          "enable_payment_button": true,
+          "show_share_buttons": false,
+          "enable_zoom": true,
+          "enable_video_looping": false,
+          "image_size": "medium",
+          "bg_color": "#ffffff",
+          "text_color": "default",
+          "bg_height": "default"
+        }
+      },
+      "product-template-joyride": {
+        "type": "product-template-joyride",
+        "settings": {
+          "layout": "minimal",
+          "container": "medium",
+          "show_breadcrumbs": true,
+          "show_vendor": false,
+          "product_variant_style": "buttons",
+          "use_swatch_images": false,
+          "show_quantity_selector": false,
+          "show_tax_notice": false,
+          "show_inventory": true,
+          "inventory_limit": 3,
+          "enable_payment_button": true,
+          "show_share_buttons": false,
+          "enable_zoom": true,
+          "enable_video_looping": false,
+          "image_size": "medium",
+          "bg_color": "#ffffff",
+          "text_color": "default",
+          "bg_height": "default"
+        }
+      },
+      "product-template-joyride-cart": {
+        "type": "product-template-joyride-cart",
+        "settings": {
+          "layout": "minimal",
+          "container": "medium",
+          "show_breadcrumbs": true,
+          "show_vendor": false,
+          "product_variant_style": "buttons",
+          "use_swatch_images": false,
+          "show_quantity_selector": false,
+          "show_tax_notice": false,
+          "show_inventory": false,
+          "inventory_limit": 3,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "enable_zoom": true,
+          "enable_video_looping": false,
+          "image_size": "large",
+          "bg_color": "#ffffff",
+          "text_color": "default",
+          "bg_height": "default"
+        }
+      },
+      "product-template-raptor": {
+        "type": "product-template-raptor",
+        "settings": {
+          "layout": "minimal",
+          "container": "medium",
+          "show_breadcrumbs": true,
+          "show_vendor": false,
+          "product_variant_style": "buttons",
+          "use_swatch_images": false,
+          "show_quantity_selector": false,
+          "show_tax_notice": false,
+          "show_inventory": true,
+          "inventory_limit": 3,
+          "enable_payment_button": true,
+          "show_share_buttons": false,
+          "enable_zoom": true,
+          "enable_video_looping": false,
+          "image_size": "medium",
+          "bg_color": "#ffffff",
+          "text_color": "default",
+          "bg_height": "default"
+        }
+      },
+      "product-template-raptor-cart": {
+        "type": "product-template-raptor-cart",
+        "settings": {
+          "layout": "minimal",
+          "container": "medium",
+          "show_breadcrumbs": true,
+          "show_vendor": false,
+          "product_variant_style": "buttons",
+          "use_swatch_images": false,
+          "show_quantity_selector": false,
+          "show_tax_notice": false,
+          "show_inventory": false,
+          "inventory_limit": 3,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "enable_zoom": true,
+          "enable_video_looping": false,
+          "image_size": "large",
+          "bg_color": "#ffffff",
+          "text_color": "default",
+          "bg_height": "default"
+        }
+      },
+      "product-template-whipv2": {
+        "type": "product-template-whipv2",
+        "settings": {
+          "layout": "minimal",
+          "container": "medium",
+          "show_breadcrumbs": true,
+          "show_vendor": false,
+          "product_variant_style": "buttons",
+          "use_swatch_images": false,
+          "show_quantity_selector": false,
+          "show_tax_notice": false,
+          "show_inventory": false,
+          "inventory_limit": 3,
+          "enable_payment_button": true,
+          "show_share_buttons": false,
+          "enable_zoom": true,
+          "enable_video_looping": false,
+          "image_size": "medium",
+          "bg_color": "#ffffff",
+          "text_color": "default",
+          "bg_height": "default"
+        }
+      },
+      "product-template-whipv2-cart": {
+        "type": "product-template-whipv2-cart",
+        "settings": {
+          "layout": "minimal",
+          "container": "medium",
+          "show_breadcrumbs": false,
+          "show_vendor": false,
+          "product_variant_style": "buttons",
+          "use_swatch_images": false,
+          "show_quantity_selector": false,
+          "show_tax_notice": false,
+          "show_inventory": false,
+          "inventory_limit": 3,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "enable_zoom": true,
+          "enable_video_looping": false,
+          "image_size": "medium",
+          "bg_color": "#ffffff",
+          "text_color": "default",
+          "bg_height": "default"
+        }
+      },
+      "product-template-hellcatv3-cart": {
+        "type": "product-template-hellcatv3-cart",
+        "settings": {
+          "layout": "minimal",
+          "container": "medium",
+          "show_breadcrumbs": false,
+          "show_vendor": false,
+          "product_variant_style": "buttons",
+          "use_swatch_images": false,
+          "show_quantity_selector": false,
+          "show_tax_notice": false,
+          "show_inventory": false,
+          "inventory_limit": 3,
+          "enable_payment_button": false,
+          "show_share_buttons": false,
+          "enable_zoom": true,
+          "enable_video_looping": false,
+          "image_size": "large",
+          "bg_color": "#ffffff",
+          "text_color": "default",
+          "bg_height": "default"
+        }
       }
     },
     "content_for_index": [
+      "1a78e919-90cb-425e-9a05-c5408b6c99dd",
       "1566456250311",
-      "1657288804d47a683f",
       "16572888775acbf6f1",
       "1566456294786",
       "1566456319558",

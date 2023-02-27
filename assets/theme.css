@@ -6478,6 +6478,7 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
 }
 .product-top-2021 .product-image{
   display:none;
+  width:100%;
 }
 .product-top-2021 .product-image.show-manual{
   display: block;
@@ -6499,6 +6500,7 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
 
 .product-top-2021-core .product-image{
   display:none;
+  width:100%;
 }
 .product-top-2021-core .product-image.show-manual{
   display: block;
@@ -6545,7 +6547,7 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
 
 /* lazer catalog style */
 .product-lazer .product-series-tag{
-  color: #00A2AA;
+  color: #95C940;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -6570,7 +6572,7 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
   font-size: 12px;
   letter-spacing: 0;
   font-weight: 500;
-  background-color: #00A2AA;
+  background-color: #95C940;
   line-height: 24px;
 }
 @media (max-width: 480px){
@@ -6591,7 +6593,7 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
   /* width: 100%;
   float: none; */
   text-align: center;
-  background: #00A2AA;
+  background: #95C940;
   margin: 0 5px;
   padding: 5px;
 }
@@ -6684,7 +6686,7 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
   display: inline-block;
   height: 100%;
   position: absolute;
-  background: #00A2AA;
+  background: #95C940;
   left: 0;
 }
 .riding-wrapper .bar-wrapper .emphasize-bar.width-20{
@@ -6758,7 +6760,7 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
   content: '';
   width: 75px;
   height: 4px;
-  background: #00A2AA;
+  background: #95C940;
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -6796,7 +6798,7 @@ body[data-anim-load="false"][data-anim-zoom="true"] .password-content__bg {
   font-style: italic;
 }
 .table-section .comment-wrapper a{
-  color: #00A2AA;
+  color: #95C940;
   font-weight: bold;
 }
 
@@ -7479,7 +7481,7 @@ div[data-section-id="product-template-core-cart"] .product-single__photo__nav{
   margin-left: 18%;
 }
 .collection-empty .empty-button{
-  background: #00A2AA;
+  background: #95C940;
   max-width: 140px;
   display: inline-block;
   width: 100%;
