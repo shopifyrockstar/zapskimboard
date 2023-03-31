@@ -272,5 +272,37 @@
 <!--Gorgias Chat Widget Start--><script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=1826"></script>
 <script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script><!--Gorgias Chat Widget End-->
 {% include 'adroll' %}
+<!--Structed data markup code added by Simprosys Infomedia - Start-->
+{% if template contains 'product' %}
+  <script type="application/ld+json">
+  {
+    "@context":"http://schema.org",
+    "@type":"Product",
+    "@id":"{{ shop.url }}{{ product.url}}", 
+    "name": {{ product.title | json }},
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    "description": {{ product.description | strip_html | truncatewords: 50 | json }},
+    "url": {{ canonical_url | json }},
+    "image": "https:{{ product.featured_image | product_img_url: 'grande' }}",
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }},
+      "url": {{ jsonld_brand_url | json }}
+    },
+    "gtin": "{{ product.selected_or_first_available_variant.barcode }}",
+    "offers": [{
+      "@type": "Offer",
+      "priceCurrency": "{{ cart.currency.iso_code }}",
+      "price": "{{ product.selected_or_first_available_variant.price | money_without_currency | remove: ',' }}",
+      "availability": "http://schema.org/{% if product.selected_or_first_available_variant.available %}InStock{% else %}OutOfStock{% endif %}",
+      "itemCondition": "http://schema.org/NewCondition",
+      "seller": "{{ shop.name | escape }}",
+      "url": "{{ shop.secure_url }}{{ product.selected_or_first_available_variant.url }}"
+    }]
+    
+  }
+  </script>
+{% endif %}
+<!--Structed data markup code added by Simprosys Infomedia - End -->
 </body>
 </html>
