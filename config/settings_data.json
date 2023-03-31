@@ -1082,7 +1082,7 @@
           "use_swatch_images": false,
           "show_quantity_selector": false,
           "show_tax_notice": false,
-          "show_inventory": true,
+          "show_inventory": false,
           "inventory_limit": 3,
           "enable_payment_button": true,
           "show_share_buttons": false,
