@@ -11,6 +11,9 @@ This file can be re-written at any time.
 
 <head>
   
+
+    <!-- Zoho Web Assistant -->
+    <script>var w=window;var p = w.location.protocol;if(p.indexOf("http") < 0){p = "http"+":";}var d = document;var f = d.getElementsByTagName('script')[0],s = d.createElement('script');s.type = 'text/javascript'; s.async = false; if (s.readyState){s.onreadystatechange = function(){if (s.readyState=="loaded"||s.readyState == "complete"){s.onreadystatechange = null;try{loadwaprops("3z4fd2e336470ae5ad72b6e0fc91d4aef3","3z8a6a3ded6033628251b774ff0ffa2a0f","3z5c26525d1d312448a60f48f326f216c984df2109c41dc30f8d476491580216da","3z17c0cac217af4fe641c2a9e8899fdd5221e43dced559a359181366d586ed839a","0.0");}catch(e){}}};}else {s.onload = function(){try{loadwaprops("3z4fd2e336470ae5ad72b6e0fc91d4aef3","3z8a6a3ded6033628251b774ff0ffa2a0f","3z5c26525d1d312448a60f48f326f216c984df2109c41dc30f8d476491580216da","3z17c0cac217af4fe641c2a9e8899fdd5221e43dced559a359181366d586ed839a","0.0");}catch(e){}};};s.src =p+"//ma.zoho.com/hub/js/WebsiteAutomation.js";f.parentNode.insertBefore(s, f);</script>
   
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-691794152"></script>
@@ -92,7 +95,7 @@ This file can be re-written at any time.
   	<!-- CSS ================================================== -->
   <style type="text/css">
   	.collection__header-media{
-      background-color: #669a9d;
+      background-color: #95C940;
     }
 
   </style>
@@ -131,6 +134,15 @@ This file can be re-written at any time.
 	<!-- JS after CSSOM=================================================== -->
   	<script type="lazyload2" data-src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
   	<script src="{{ 'custom.js' | asset_url }}" defer="defer"></script>
+
+	<script>
+      {% if template contains 'product' %}
+      var variant_data_object = { {% for variant in product.variants %}variant_{{ variant.id }}:'{{ variant.metafields.custom.variant_barcode }}'{% unless forloop.last == true %},{% endunless %} {% endfor %} }          
+      {% else %}
+      var variant_data_object ={};
+      {% endif %}
+      var variant_barcode;
+    </script>
   	
 
 </head>
@@ -149,12 +161,6 @@ This file can be re-written at any time.
 			document.body.className = document.body.className.replace('js-theme-loading','js-theme-loaded');
 		}, 300);
 	</script>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5N9FNH"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-  
 <script>
 		//cart functions
 		theme.ajaxCartInit = function() {
@@ -182,6 +188,36 @@ This file can be re-written at any time.
 <script type="lazyload2" data-src="{{ 'scrollreveal.min.js' | asset_url }}"></script>
 <script type="lazyload2" data-src="{{ 'shopify_common.js' | shopify_asset_url }}"></script>
 <script type="text/javascript" src="{{ 'optimization.js' | asset_url }}" defer></script>
+<script id="gorgias-chat-widget-install-v2" src="https://config.gorgias.chat/gorgias-chat-bundle-loader.js?applicationId=1826"></script>
+<script id="gorgias-chat-shopify-install">!function(_){_.SHOPIFY_PERMANENT_DOMAIN="{{shop.permanent_domain}}",_.SHOPIFY_CUSTOMER_ID="{{customer.id}}",_.SHOPIFY_CUSTOMER_EMAIL="{{customer.email}}"}(window||{});</script>
+<script type="application/ld+json">
+  {
+    "@context":"http://schema.org",
+    "@type":"Product",
+    "@id":"{{ shop.url }}{{ product.url}}", 
+    "name": {{ product.title | json }},
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    "description": {{ product.description | strip_html | truncatewords: 50 | json }},
+    "url": {{ canonical_url | json }},
+    "image": "https:{{ product.featured_image | product_img_url: 'grande' }}",
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }},
+      "url": {{ jsonld_brand_url | json }}
+    },
+    "gtin": "{{ product.selected_or_first_available_variant.barcode }}",
+    "offers": [{
+      "@type": "Offer",
+      "priceCurrency": "{{ cart.currency.iso_code }}",
+      "price": "{{ product.selected_or_first_available_variant.price | money_without_currency | remove: ',' }}",
+      "availability": "http://schema.org/{% if product.selected_or_first_available_variant.available %}InStock{% else %}OutOfStock{% endif %}",
+      "itemCondition": "http://schema.org/NewCondition",
+      "seller": "{{ shop.name | escape }}",
+      "url": "{{ shop.secure_url }}{{ product.selected_or_first_available_variant.url }}"
+    }]
+    
+  }
+  </script>
   <style type="text/css">
     body, html {
       width: 100% !important;
