@@ -218,7 +218,7 @@
                             <div class="o-layout{% if settings.product_grid_masonry %} o-layout--masonry{% endif %}{% if section.settings.grid == 4 %} o-layout--small{% endif %}{% if section.settings.grid_mobile == '2' %} o-layout--small@tab-down{% endif %}">
                                 {% for product in collection.products %}
                                     
-                                    {% if collection.handle == 'traction' or collection.handle == 'apparel' %}
+                                    {% if collection.handle == 'traction' or collection.handle == 'apparel' or collection.handle == 'spring-sale-bogo-apparel' %}
                                       {% assign hasColor = false %}
                                         {% for option in product.options %}
                                           {% if option == "Color" or option == "Colour" %}
