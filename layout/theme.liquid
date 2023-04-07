@@ -130,7 +130,7 @@
 
 	<script>
       {% if template contains 'product' %}
-      var variant_data_object = { {% for variant in product.variants %}variant_{{ variant.id }}:'{{ variant.metafields.custom.variant_barcode }}'{% unless forloop.last == true %},{% endunless %} {% endfor %} }          
+      var variant_data_object = { {% for variant in product.variants %}variant_{{ variant.id }}:'{{ variant.barcode }}'{% unless forloop.last == true %},{% endunless %} {% endfor %} }          
       {% else %}
       var variant_data_object ={};
       {% endif %}
